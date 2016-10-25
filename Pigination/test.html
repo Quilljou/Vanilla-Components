@@ -23,16 +23,43 @@
             background: #fff;
             color: #233;
         }
+        .pagi {
+            background: pink;
+            color: tomato;
+        }
     </style>
 </head>
 <body>
     <div id="pagination">
 
     </div>
+    <div id="pagi">
+
+    </div>
+    <div id="c">
+
+    </div>
+    <div id="d">
+
+    </div>
+    <div id="e">
+
+    </div>
     <script src="./pigination.js">
     </script>
     <script type="text/javascript">
-    Pagination.init(document.getElementById('pagination'),{})
+    var a = new Pagination()
+    a.init(document.getElementById('pagination'),{size: 40})
+    console.log(a);
+    var b = new Pagination()
+    b.init(document.getElementById('pagi'),{size: 30})
+    console.log(b);
+    var c = new Pagination();
+    c.init(document.getElementById('c'),{size: 30,length:20})
+    var d = new Pagination();
+    d.init(document.getElementById('d'),{size: 300,length:10,pagiClass: 'pagi'})
+    var e = new Pagination();
+    e.init(document.getElementById('e'),{index: 3,size: 300,length:10,pagiClass: 'pagi',queryString:'/page/'})
     </script>
 </body>
 </html>
